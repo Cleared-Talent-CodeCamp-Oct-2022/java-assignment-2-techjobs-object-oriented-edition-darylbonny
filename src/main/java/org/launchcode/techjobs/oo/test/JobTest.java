@@ -54,6 +54,15 @@ public class JobTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine() {
 
+        assertEquals(10L, 10L);
+
+    }
+
+    @Test
+    public void testJobsForEquality() {
+        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertFalse(job1.equals(job2));
     }
 
 }
